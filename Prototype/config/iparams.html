@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="https://static.freshdev.io/fdk/2.0/assets/fresh_client.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <style type="text/css">
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+        font-size: 13px;
+        line-height: 1.42857143;
+        color: #183247;
+    }
+
+
+    .hide {
+        display: none !important;
+    }
+    </style>
+    <script type="text/javascript">
+    function initHandlers() {
+
+    }
+
+    function postConfigs() {
+        var postObj = {},
+            id,
+            value;
+
+        jQuery("input[type='text']").each(function() {
+            id = jQuery(this).attr("id");
+            value = jQuery(this).val();
+            postObj[id] = value;
+        });
+
+        return postObj;
+    }
+
+    function getConfigs(configs) {
+        jQuery(configs).each(function(_k, _v) {
+            jQuery("#" + _k).val(_v).trigger("change");
+        });
+    }
+
+    function validate() {
+        return true;
+    }
+    initHandlers();
+    </script>
+</head>
+
+<body>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Pitney Bowes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Freshservice</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Paypal</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <form class="col-4">
+                <div class="form-group">
+                    <label class="control-label">Key</label>
+                    <input class="form-control" type="text" id="pitneyClient">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Secret</label>
+                    <input class="form-control" type="text" id="pitneySecret">
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <form class="col-4">
+                <div class="form-group">
+                    <label class="control-label">API Key</label>
+                    <input class="form-control" type="text" id="freshserviceKey">
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <form class="col-4">
+                <div class="form-group">
+                    <label class="control-label">Key</label>
+                    <input class="form-control" type="text" id="paypalClient">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Secret</label>
+                    <input class="form-control" type="text" id="paypalSecret">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

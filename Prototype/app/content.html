@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://static.freshdev.io/fdk/2.0/assets/fresh_client.js" ></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css"  href="modal.css" >
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="asset-tab" data-toggle="tab" href="#asset" role="tab" aria-controls="asset" aria-selected="true">Asset Information</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="invoice-tab" data-toggle="tab" href="#invoice" role="tab" aria-controls="invoice" aria-selected="false">Paypal Invoices</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="asset" role="tabpanel" aria-labelledby="asset-tab">
+                <table class="table">
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="invoice" role="tabpanel" aria-labelledby="paypal-tab">
+                <table class="table">
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" ></script>
+    <script type="text/javascript" src="modal.js" ></script>
+</body>
+
+</html>

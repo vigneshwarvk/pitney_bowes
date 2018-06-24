@@ -1,0 +1,29 @@
+p {
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+}
+
+.btn-primary {
+    background: #24364a !important;
+    color: #fff !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    font-weight: normal !important;
+    border: 1px solid #24364a !important;
+    margin-top: 10px;
+}
+
+.btn-primary:hover,.btn-primary:focus {
+    background-color: #141c30 !important;
+    border-color: #141c30 !important;
+    color: #fff !important;
+}
+
+table {
+    background: #fff !important;
+    margin: 10px 0 !important;
+    border: 1px solid #ebeef0 !important;
+}

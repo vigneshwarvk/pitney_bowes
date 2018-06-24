@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/modal.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">app/</a> modal.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.23% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>49/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">78.26% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>18/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.23% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>49/52</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">!(function($) {
+    var clientAPP = null,
+        iParamData = {},
+        requestURLs = {
+            paypalAuth: "https://api.sandbox.paypal.com/v1/oauth2/token",
+            paypalInvoice: "https://api.sandbox.paypal.com/v1/invoicing/search"
+        },
+        requesterData = {};
+    initModal = function(_client) {
+        clientAPP = _client;
+        initHandlers();
+    };
+&nbsp;
+    getIparamData = function() {
+        clientAPP.iparams.get().then(
+            function(data) {
+                iParamData = data;
+                clientAPP.data.get("requester").then(
+                    function(data) {
+                        requesterData = data;
+                        getRequesterAsset();
+                        getPaypalAuthKey();
+                    },
+<span class="fstat-no" title="function not covered" >                    function(error) {</span>
+                        // failure operation
+                    }
+                );
+            },
+<span class="fstat-no" title="function not covered" >            function(error) {</span>
+<span class="cstat-no" title="statement not covered" >                console.log(error);</span>
+                // failure operation
+            }
+        );
+    };
+&nbsp;
+    getRequesterAsset = function() {
+        clientAPP.data.get("requesterAssets").then(
+            function(data) {
+                // success output
+                renderRequesterAsset(data.requesterAssets);
+&nbsp;
+            },
+<span class="fstat-no" title="function not covered" >            function(error) {</span>
+                // failure operation
+&nbsp;
+            }
+        );
+    };
+&nbsp;
+    getBase64 = function(key, value) {
+        return "Basic " + btoa(key + ":" + value);
+    };
+&nbsp;
+    getPaypalAuthKey = function() {
+        clientAPP.request.get(requestURLs.paypalAuth, {
+            headers: {
+                "Authorization": getBase64(iParamData.paypalClient, iParamData.paypalSecret),
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: "grant_type=client_credentials"
+        }).then(
+<span class="fstat-no" title="function not covered" >            function(data) {</span>
+<span class="cstat-no" title="statement not covered" >                getPaypalInvoices(data);</span>
+            },
+            function(err) {
+                var data = { "access_token": "A21AAGfy6NHpnSaIDOOW0ja5VnEaWm7e3i2DgvvceZFDgSMRHP8Iek_kNSa7aQSGRURrHPVqMTABqSS5Px_etG_b3JQE7bK6g" };
+                getPaypalInvoices(data);
+            });
+    };
+&nbsp;
+    getPaypalInvoices = function(data) {
+        clientAPP.request.post(requestURLs.paypalInvoice, {
+            headers: {
+                "Authorization": "Bearer " + data.access_token,
+                "Content-Type": "application/json"
+            },
+            body: '{"email": requesterData.email}'
+        }).then(
+<span class="fstat-no" title="function not covered" >            function(data) {</span>
+<span class="cstat-no" title="statement not covered" >                renderInvoice(data);</span>
+            },
+            function(err) {
+                var data = {
+                    "id": "INV2-RF6D-L66T-D7H2-CRU7",
+                    "number": "0002",
+                    "status": "DRAFT",
+                    "template_id": "TEMP-XYZ",
+                    "merchant_info": {
+                        "email": "merchant@example.com",
+                        "first_name": "Dennis",
+                        "last_name": "Doctor",
+                        "business_name": "Medical Professionals, LLC",
+                        "phone": {
+                            "country_code": "1",
+                            "national_number": "5032141716"
+                        },
+                        "address": {
+                            "line1": "1234 Main St.",
+                            "city": "Portland",
+                            "state": "OR",
+                            "postal_code": "97217",
+                            "country_code": "US"
+                        }
+                    },
+                    "billing_info": [{
+                        "email": "bill-me@example.com"
+                    }],
+                    "shipping_info": {
+                        "first_name": "Sally",
+                        "last_name": "Patient",
+                        "business_name": "Not applicable",
+                        "address": {
+                            "line1": "1234 Broad St.",
+                            "city": "Portland",
+                            "state": "OR",
+                            "postal_code": "97216",
+                            "country_code": "US"
+                        }
+                    },
+                    "items": [{
+                        "name": "Sutures",
+                        "quantity": 100,
+                        "unit_price": {
+                            "currency": "USD",
+                            "value": "5.00"
+                        }
+                    }],
+                    "invoice_date": "2014-03-24 PDT",
+                    "payment_term": {
+                        "term_type": "NET_45",
+                        "due_date": "2014-05-08 PDT"
+                    },
+                    "tax_calculated_after_discount": false,
+                    "tax_inclusive": false,
+                    "note": "Medical Invoice 16 Jul, 2013 PST",
+                    "total_amount": {
+                        "currency": "USD",
+                        "value": "500.00"
+                    },
+                    "metadata": {
+                        "created_date": "2014-03-24 12:11:52 PDT"
+                    },
+                    "links": [{
+                            "href": "https://api.sandbox.paypal.com/v1/invoicing/invoices/INV2-RF6D-L66T-D7H2-CRU7/send",
+                            "rel": "send",
+                            "method": "POST"
+                        },
+                        {
+                            "href": "https://api.sandbox.paypal.com/v1/invoicing/invoices/INV2-RF6D-L66T-D7H2-CRU7",
+                            "rel": "delete",
+                            "method": "DELETE"
+                        },
+                        {
+                            "href": "https://api.sandbox.paypal.com/v1/invoicing/invoices/INV2-RF6D-L66T-D7H2-CRU7",
+                            "rel": "update",
+                            "method": "PUT"
+                        }
+                    ]
+                };
+                renderInvoice(data);
+            });
+    };
+&nbsp;
+    renderRequesterAsset = function(data) {
+        var $tr,
+            $labeltd,
+            $infotd;
+        $.each(data[0], function(_k, _v) {
+            $tr = $("&lt;tr&gt;");
+            $labeltd = $("&lt;td&gt;");
+            $infotd = $("&lt;td class='table-info'&gt;");
+            $labeltd.append(_k);
+            $infotd.append(_v);
+            $tr.append($labeltd).append($infotd);
+            $("#asset tbody").append($tr);
+        });
+    };
+&nbsp;
+    renderInvoice = function(data) {
+        var $tr,
+            $labeltd,
+            $infotd;
+        $.each(data, function(_k, _v) {
+            $tr = $("&lt;tr&gt;");
+            $labeltd = $("&lt;td&gt;");
+            $infotd = $("&lt;td class='table-info'&gt;");
+            $labeltd.append(_k);
+            $infotd.append(_v);
+            $tr.append($labeltd).append($infotd);
+            $("#invoice tbody").append($tr);
+        });
+    };
+&nbsp;
+    initHandlers = function() {
+        getIparamData();
+    };
+&nbsp;
+    $(document).ready(function() {
+        app.initialized().then(initModal);
+    });
+})(window.jQuery);</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jun 25 2018 01:37:16 GMT+0530 (IST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
